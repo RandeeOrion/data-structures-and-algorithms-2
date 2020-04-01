@@ -2,7 +2,7 @@
 linked-list.js has created two linked lists with classes Node and LinkedList.
     
 ## Links
-Github [Pull Request]()
+Github [Pull Request](https://github.com/RandeeOrion/data-structures-and-algorithms-2/pull/1)
     
 ## Challenge
 <!-- Description of the challenge -->
