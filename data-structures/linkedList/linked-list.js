@@ -49,9 +49,9 @@ class LinkedList {
   }
 }
 
-// let myList = new LinkedList();
+let myList = new LinkedList();
 
-// myList.insert('A');
+myList.insert('A');
 // myList.insert('B');
 // myList.insert('C');
 // myList.insert('D');
@@ -60,6 +60,6 @@ class LinkedList {
 // myList.includes('B');
 // myList.includes('F');
 
-// myList.toString();
+myList.toString();
 
 module.exports = { Node, LinkedList };
