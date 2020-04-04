@@ -7,10 +7,10 @@ class Node {
     this.prev = null;
   }
 }
+
 // Need Try Catches for these
 class LinkedList {
   constructor () {
-    //default linked list is empty
     this.head = undefined;
   }
 
@@ -24,13 +24,12 @@ class LinkedList {
     let current = this.head;
     while(current != null) {
       if(val === current.val) {
-        // current = current.next;
-        console.log(val, true);
+        // console.log(val, true);
         return true
       }
       else {
         current = current.next;
-        console.log(val, false);
+        // console.log(val, false);
       }
     }
     return false
@@ -62,14 +61,15 @@ class LinkedList {
 
   insertBefore(val, newVal){
     let current = this.head;
-    console.log(current);
-    console.log(current.next.val, val)
     while(current.next.val !== val){
-      console.log('inside while loop');
       current = current.next;
     }
     let newNode = new Node(newVal);
-    current.prev = newNode;
+    console.log(current.next)
+    newNode.next = current.next
+    
+    current.next = newNode;
+  
   }
 
   
