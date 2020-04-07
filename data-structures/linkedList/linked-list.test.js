@@ -87,4 +87,47 @@ describe('passes all lab tests', () => {
 // Can successfully insert a node after the last node of the linked list
 
 
+});
+
+
+
+describe('test the kth method', () => {
+  it('when K is greater than the length of the list', () => {
+    let myList = new LinkedList();
+    myList.insert('A');
+    myList.insert('B')
+    expect(myList.knthFromTheEnd(5)).toBe('Your Linked List is too short!');
+  })
+
+  it('when k and the length of the list are the same', () => {
+    let myList = new LinkedList();
+    myList.insert('A');
+    myList.insert('B');
+    myList.insert('C');
+    myList.insert('D');
+    expect(myList.knthFromTheEnd(4)).toBe('D');
+  })
+
+  it('when k is not a postive interger', () => {
+    let myList = new LinkedList();
+    myList.insert('A');
+    myList.insert('B');
+    myList.insert('C');
+    expect(myList.knthFromTheEnd(-1)).toBe('Oups! You need a positive attitude to get a positive number.')
+  })
+
+  it('when the linked list is 1', () => {
+    let myList = new LinkedList();
+    myList.insert('A');
+    expect(myList.knthFromTheEnd(1)).toBe('A');
+  })
+
+  it('when k and the length of the list are the same', () => {
+    let myList = new LinkedList();
+    myList.insert('A');
+    myList.insert('B');
+    myList.insert('C');
+    myList.insert('D');
+    expect(myList.knthFromTheEnd(3)).toBe('C');
+  })
 })

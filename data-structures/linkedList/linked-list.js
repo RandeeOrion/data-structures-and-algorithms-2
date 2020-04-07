@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('running');
+
 class Node {
   constructor (val){
     this.val = val;
@@ -72,7 +74,25 @@ class LinkedList {
   
   }
 
-  
+  knthFromTheEnd(k){
+    if(k < 1) return ('Oups! You need a positive attitude to get a positive number.')
+    let current = this.head;
+    let thisNode = this.head;
+    let counter = 0
+    while (current.next != null){
+      current = current.next;
+      counter ++;
+      if(counter >= k){
+        thisNode = thisNode.next
+      }
+    }
+    // console.log('------------------')
+    // console.log('k', k)
+    // console.log('counter', counter)
+    if(k -1 >counter) return 'Your Linked List is too short!';
+    else if(thisNode.val) return(thisNode.val);
+    else return('The exception to the rule!')
+  }
   
 }
 
@@ -82,7 +102,7 @@ myList.insert('A');
 myList.insert('B');
 myList.insert('C');
 myList.insert('D');
-// myList.insert('E');
+myList.insert('E');
 
 myList.includes('B');
 myList.includes('F');
@@ -91,5 +111,8 @@ myList.append('Q'),
 myList.insertBefore('B', 'E')
 
 myList.toString();
+
+console.log('5');
+myList.knthFromTheEnd(5);
 
 module.exports = { Node, LinkedList };
