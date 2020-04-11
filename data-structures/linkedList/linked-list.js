@@ -86,23 +86,30 @@ class LinkedList {
         thisNode = thisNode.next
       }
     }
-    // console.log('------------------')
-    // console.log('k', k)
-    // console.log('counter', counter)
     if(k -1 >counter) return 'Your Linked List is too short!';
     else if(thisNode.val) return(thisNode.val);
     else return('The exception to the rule!')
+  }
+
+  mergeLists(ll1, ll2){
+
   }
   
 }
 
 let myList = new LinkedList();
+let secondList = new LinkedList();
 
 myList.insert('A');
 myList.insert('B');
 myList.insert('C');
 myList.insert('D');
 myList.insert('E');
+secondList.insert('1');
+secondList.insert('2');
+secondList.insert('3');
+secondList.insert('4');
+secondList.insert('5');
 
 myList.includes('B');
 myList.includes('F');
