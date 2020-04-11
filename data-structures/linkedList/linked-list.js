@@ -91,9 +91,6 @@ class LinkedList {
     else return('The exception to the rule!')
   }
 
-  mergeLists(ll1, ll2){
-
-  }
   
 }
 
