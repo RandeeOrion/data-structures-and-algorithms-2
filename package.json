@@ -1,0 +1,25 @@
+{
+  "name": "data-structures-and-algorithms-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --coverage --verbose",
+    "watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RandeeOrion/data-structures-and-algorithms-2.git"
+  },
+  "author": "Randee Orion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RandeeOrion/data-structures-and-algorithms-2/issues"
+  },
+  "homepage": "https://github.com/RandeeOrion/data-structures-and-algorithms-2#readme",
+  "dependencies": {
+    "jest": "^25.2.4"
+  }
+}
