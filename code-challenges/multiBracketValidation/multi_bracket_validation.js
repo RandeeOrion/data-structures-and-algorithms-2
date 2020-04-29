@@ -14,7 +14,7 @@ function multiBracketValidation(str){
     // console.log('openBrack test', openBracket.test(charArr[i]));
     if (openBracket.test(charArr[i]) ){
       stackOBrackets.push(charArr[i]);
-      console.log('pushed to stackOBrackets', charArr[i]);
+      // console.log('pushed to stackOBrackets', charArr[i]);
     } else if (charArr[i] === '}' || charArr[i] === ']' || charArr[i] === ')') {
       let poppedVal = stackOBrackets.pop();
       // console.log(poppedVal.val, charArr[i]);
@@ -28,11 +28,11 @@ function multiBracketValidation(str){
 }
 
 
-const good = '({[]})';
-// const bad = '({[}}]';
-// const pretendGood = '([])'
-console.log('---------------- GOOD ---------------');
-console.log(multiBracketValidation(good));
+// const good = '({[]})';
+// // const bad = '({[}}]';
+// // const pretendGood = '([])'
+// console.log('---------------- GOOD ---------------');
+// console.log(multiBracketValidation(good));
 // console.log('---------------- BAD ---------------');
 // console.log(multiBracketValidation(bad));
 // console.log('---------------- PRETENDGOOD ---------------');

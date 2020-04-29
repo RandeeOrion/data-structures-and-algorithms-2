@@ -4,12 +4,6 @@ const mBV = require('./multi_bracket_validation.js');
 
 
 describe('Edge Cases', () => {
-  it('Handles an empty string', () => {
-    expect(mBV('')).toBe(false);
-  });
-  it('Handles a single character in a string', () => {
-    expect(mBV('H')).toBe(false);
-  });
   it('Handles something other than a string', () => {
     expect(mBV(4)).toBe(false);
   });
