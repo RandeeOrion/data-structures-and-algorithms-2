@@ -1,28 +1,34 @@
 'use strict';
 
 
-const BSTree = require('./binarySearchTree.js');
-let newTree = BSTree.BinarySearchTree
+const trees = require('./tree.js');
+let BT = trees.BinaryTree;
+let BST = trees.BinarySearchTree;
 
 
-
-// You can search a binary search tree for a value and get the correct true/false result
+describe('Binary Tree tests', () => {
+  it('can successfully instantate an empty tree', () => {
+    let tree = new BST();
+    expect(tree).toBeDefined();
+    expect(tree.root).toBe(null);
+  })
+})
 
 describe ('All is well', () => {
   
   it ('can successfully instantiate an empty tree', () => {
-    let tree = new newTree();
-    expect(BSTree.BinarySearchTree.contains()).toBe(false);
+    let tree = new BST();
+    expect(BST.contains()).toBe(false);
   });
 
   it ('You can successfully instantiate a tree and add a single root node', () => {
-    let tree = new BSTree.BinarySearchTree();
+    let tree = new BST();
     tree.add(5);
     expect(tree.contains(5, tree.root)).toBe(true);
   });
 
   it ('can successfully add a left and right child to a single root node', () => {
-    let tree = new BSTree.BinarySearchTree();
+    let tree = new BST();
     tree.add(5);
     tree.add(3);
     tree.add(2);
@@ -31,7 +37,7 @@ describe ('All is well', () => {
   
 
   it ('can successfully do a preOrder traversal', () => {
-    let tree = new BSTree.BinarySearchTree();
+    let tree = new BST();
     tree.add(5);
     tree.add(3);
     tree.add(2);
@@ -40,7 +46,7 @@ describe ('All is well', () => {
   });
 
   it ('can successfully do an inOrder traversal', () => {
-    let tree = new BSTree.BinarySearchTree();
+    let tree = new BST();
     tree.add(5);
     tree.add(3);
     tree.add(2);
@@ -49,7 +55,7 @@ describe ('All is well', () => {
   });
 
   it ('can successfully do a postOrder traversal', () => {
-    let tree = new BSTree.BinarySearchTree();
+    let tree = new BST();
     tree.add(5);
     tree.add(3);
     tree.add(2);
@@ -59,13 +65,13 @@ describe ('All is well', () => {
   });
 
   it ('can successfully add a value to a binary search tree', () => {
-    let tree = new BSTree.BinarySearchTree();
+    let tree = new BST();
     expect(tree.add(5)).not.toThrow();
 
   })
 
   it ('can search a binary search tree for a value and get the correct true/false result', () => {
-    let tree = new BSTree.BinarySearchTree();
+    let tree = new BST();
     tree.add(5);
     expect(tree.contains(5,tree.root)).toBe(true);
   });

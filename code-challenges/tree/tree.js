@@ -3,7 +3,6 @@
 
 const Node = require('./node.js')
 
-console.log('in the right file');
 
 
 class BinaryTree {
@@ -23,7 +22,7 @@ class BinaryTree {
     if (root.right){
       tempArr = [...tempArr, ...this.preOrder(root.right)];
     }
-
+    console.log('preOrder Array', tempArr);
     return tempArr;
   }
 
@@ -39,7 +38,7 @@ class BinaryTree {
     if (root.right){
        tempArr = [...tempArr, ...this.inOrder(root.right)];
     }
-
+    console.log('inOrder array', tempArr);
     return tempArr;
   }
 
@@ -56,6 +55,7 @@ class BinaryTree {
     
     tempArr.push(root.val); 
 
+    console.log('postOrder', tempArr);
     return tempArr;
   }
 }
@@ -118,20 +118,19 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-let tree = new BinarySearchTree();
-tree.add(5);
+// let tree = new BinarySearchTree();
+// tree.add(5);
 
-tree.add(3);
-tree.add(2);
-tree.add(4);
+// tree.add(3);
+// tree.add(2);
+// tree.add(4);
 
-tree.add(8);
-tree.add(7);
-tree.add(9);
+// tree.add(8);
+// tree.add(7);
+// tree.add(9);
 
 // tree.preOrder(tree.root);
-tree.inOrder(tree.root);
-console.log('tree.root: ', tree.root);
+// tree.inOrder(tree.root);
 // tree.postOrder(tree.root);
 
 // tree.contains(5, tree.root);
@@ -139,4 +138,4 @@ console.log('tree.root: ', tree.root);
 // tree.contains(8, tree.root);
 // tree.contains(20, tree.root);
 
-// module.exports = { Node, BinaryTree, BinarySearchTree};
+module.exports = { Node, BinaryTree, BinarySearchTree};
