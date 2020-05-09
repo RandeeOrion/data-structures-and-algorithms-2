@@ -1,5 +1,8 @@
 'use strict';
 
+// Write a function that takes in a tree and changes the value to Fizz if the val is divisible by 3 to Buzz if it is divisible by 5 and FizzBuzz if it is divisible by 15 
+
+//class that creates the node
 class Node {
   constructor (val) {
     this.val = val;
@@ -8,16 +11,6 @@ class Node {
   }
 }
 
-
-let treeRoot = new Node(4);
-
-treeRoot.right = new Node(5);
-treeRoot.right.right = new Node(6);
-treeRoot.right.left = new Node(7);
-
-treeRoot.left = new Node(9);
-treeRoot.left.left = new Node(3);
-treeRoot.left.right = new Node(2);
 
 const fizzBuzz = (node) => {
   //Variables to make this easier, a new tree and a string to concat whatever is needed for the value of the new nodes in the new tree
@@ -43,5 +36,8 @@ const fizzBuzz = (node) => {
   return newTreeRoot;
 }
 
+
+//exports for testing
 module.exports = {Node, fizzBuzz};
 
+// BigO of n
