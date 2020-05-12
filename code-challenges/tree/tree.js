@@ -1,7 +1,16 @@
 'use strict';
 
 
-const Node = require('./node.js')
+// const Node = require('./node.js')
+const Queue = require('../stacksAndQueues/queue.js');
+
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right= null;
+  }
+}
 
 
 
@@ -58,6 +67,38 @@ class BinaryTree {
     console.log('postOrder', tempArr);
     return tempArr;
   }
+
+   // Write a method inside the BT class that takes in a tree and does a breadthFirst traversal. 
+  /*            6   
+             4    5
+            3 1   8 9
+
+            will return 
+            6 4 5 3 1 8 9
+  */
+ breadthFirst(root){
+   // creates the new array and adds the value of the root
+   let tempArr = [];
+   let queue = new Queue();
+   //need to set an index counter so we can add to temp array
+
+
+   //queueing node to check for children
+   queue.enqueue(root.val);
+    while(!queue.isEmpty()){
+      let thisNode = queue.dequeue();
+      console.log('here', thisNode)
+      // tampArr = [...tempArr, ...thisNode.val];
+      if(thisNode.left || thisNode.right){
+        queue.enqueue(thisNode.left);
+        queue.enqueue(thisNode.right);
+      }
+    }
+  
+   console.log('Bread First Return Array ');
+   console.log(tempArr);
+   return tempArr;
+}
 }
 
 class BinarySearchTree extends BinaryTree {
@@ -118,16 +159,18 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-// let tree = new BinarySearchTree();
-// tree.add(5);
+let tree = new BinaryTree();
+tree.root = new Node(5);
 
-// tree.add(3);
-// tree.add(2);
-// tree.add(4);
+tree.root.left = new Node(3);
+tree.root.left.right = new Node(2);
+tree.root.left.left = new Node(4);
 
-// tree.add(8);
-// tree.add(7);
-// tree.add(9);
+tree.root.right = new Node(8);
+tree.root.right.left = new Node(7);
+tree.root.right.right = new Node(9);
+
+tree.breadthFirst(tree.root);
 
 // tree.preOrder(tree.root);
 // tree.inOrder(tree.root);
