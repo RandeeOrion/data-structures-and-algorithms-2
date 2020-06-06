@@ -5,9 +5,32 @@ const trees = require('./tree.js');
 let BT = trees.BinaryTree;
 let BST = trees.BinarySearchTree;
 
+describe('Binary Trees breadthFirst function', () => {
+  it('can hand a single node', () => {
+    let tree = new BT();
+    tree.add(5);
+    expect(tree.breadthFirst()).toReturn(5);
+  });
+  
+  it('can handle a regular tree', () => {
+    let tree = new BT();
+    tree.add(5)
+
+    tree.add(4);
+    tree.add(3);
+    tree.add(2);
+
+    tree.add(6);
+    tree.add(7);
+
+    expect(tree.breadthFirst()).toReturn(5,4,6,3,2,7);
+  })
+
+})
+
 
 describe('Binary Tree tests', () => {
-  it('can successfully instantate an empty tree', () => {
+  it('can successfully instantiate an empty tree', () => {
     let tree = new BST();
     expect(tree).toBeDefined();
     expect(tree.root).toBe(null);
@@ -18,7 +41,7 @@ describe ('All is well', () => {
   
   it ('can successfully instantiate an empty tree', () => {
     let tree = new BST();
-    expect(BST.contains()).toBe(false);
+    expect(BST.contains()).toBe(null);
   });
 
   it ('You can successfully instantiate a tree and add a single root node', () => {
