@@ -22,7 +22,7 @@ class BinaryTree {
     if (root.right){
       tempArr = [...tempArr, ...this.preOrder(root.right)];
     }
-    console.log('preOrder Array', tempArr);
+    // console.log('preOrder Array', tempArr);
     return tempArr;
   }
 
@@ -38,7 +38,7 @@ class BinaryTree {
     if (root.right){
        tempArr = [...tempArr, ...this.inOrder(root.right)];
     }
-    console.log('inOrder array', tempArr);
+    // console.log('inOrder array', tempArr);
     return tempArr;
   }
 
