@@ -1,4 +1,5 @@
 # Insertion Sort
+[Github PR](https://github.com/RandeeOrion/data-structures-and-algorithms-2/pull/12)
 
 ## Challenge Description
 Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article that shows the step-by-step output after each iteration through some sort of visual.
