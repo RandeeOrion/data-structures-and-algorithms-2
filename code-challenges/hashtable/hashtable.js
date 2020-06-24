@@ -36,4 +36,12 @@ class HashTable {
     }
     index ++
   }
+
+  contains(key) {
+    let val = this.get(key);
+    if (!val) return false;
+    else return true;
+  }
 }
+
+module.exports = HashTable;
