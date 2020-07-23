@@ -1,0 +1,15 @@
+{
+  "name": "leftjoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "left-join.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "start": "node left-join.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.1.0"
+  }
+}
