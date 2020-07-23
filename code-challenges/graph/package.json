@@ -1,0 +1,15 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "graph.js",
+  "scripts": {
+    "start": "node graph.js",
+    "test": "jest --verbose --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.1.0"
+  }
+}
