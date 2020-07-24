@@ -17,6 +17,7 @@ class Queue {
     let nodeToQueue = new Node(val);
 
     if(this.isEmpty()){
+      
       this.front = nodeToQueue;
       this.rear = nodeToQueue;
       return;
@@ -24,6 +25,7 @@ class Queue {
 
     this.rear.next = nodeToQueue;
     this.rear = nodeToQueue;
+    return nodeToQueue;
   }
 
   dequeue() {
@@ -33,7 +35,6 @@ class Queue {
       throw 'Empty';
       return;
     }
-
     this.front = this.front.next;
     workingNode.next = null;
 
